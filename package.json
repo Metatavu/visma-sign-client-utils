@@ -1,0 +1,22 @@
+{
+  "name": "visma-sign-client-utils",
+  "version": "0.0.1",
+  "description": "Utilities for visma sign client",
+  "license": "agpl-3.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc tape test/*-test.js"
+  },
+  "devDependencies": {
+    "blue-tape": "^1.0.0",
+    "nyc": "^11.4.1"
+  },
+  "author": "Metatavu Oy",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Metatavu/visma-sign-client-utils.git"
+  },
+  "dependencies": {
+    "moment": "^2.20.1"
+  }
+}
