@@ -13,14 +13,14 @@
      * @param {string} clientId - Your clint id
      * @param {string} clientSecret - Your client secret in base64 encoded format
      * @param {string} method - http method, GET, POST, PUT, DELETE
-     * @param {object} body - request body in JSON format
+     * @param {string} body - request body in JSON format
      * @param {string} contentType - Content type, must be the same as in request headers
      * @param {date} date - Date that was sent in request headers
      * @param {string} path - The request path
      * @returns {string} A string that can be placed into Authorization - header
      */
     static createAuthorizationHeader(clientId, clientSecret, method, body, contentType, date, path) {
-      const bodyHash = VismaSignClientUtils.createBodyHash(JSON.stringify(body));
+      const bodyHash = VismaSignClientUtils.createBodyHash(body);
       const formattedDate = VismaSignClientUtils.formatDate(date);
       const hmacString = [method, bodyHash, contentType, formattedDate, path].join('\n');
       const encrypted = VismaSignClientUtils.encrypt(clientSecret, hmacString);

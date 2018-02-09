@@ -1,6 +1,6 @@
 {
   "name": "visma-sign-client-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities for visma sign client",
   "license": "agpl-3.0",
   "main": "index.js",

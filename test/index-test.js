@@ -18,7 +18,7 @@ test("Test creating authorization header", (t) => {
           "ddf58116-6082-4bfc-a775-0c0bb2f945ce",           // clientId and Secret taken from Visma Sign API documentation example,
           "jp7SjOOr4czRTifCo30qx0sZAIw9PW+vVpsbP09pQaY=",   // not real
           "POST",
-          {"document":{"name":"Test"}},
+          JSON.stringify({"document":{"name":"Test"}}),
           "application/json",
           new Date("Tue, 16 May 2017 10:18:18 +0300"),
           "/api/v1/document/");
